@@ -1,0 +1,64 @@
+.forgot-password{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 6% 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forgot-password form{
+    padding: 5%;
+    width: 50%;
+    height: 100%;
+    background-color: #fefefe;
+    box-shadow: 3px 3px 4px 1px #caced9;
+}
+
+/* Header */
+.forgot-password h2{
+    margin-bottom: 20%;
+    color: orange;
+}
+
+.forgot-password h4{
+    margin-top: 10px;
+    margin-bottom: 40px;
+    color: rgba(255, 166, 0, 0.802);
+}
+
+.forgot-password span{
+    /* color: orange; */
+}
+
+/* Form input */
+.forgot-password input {
+    color: #000;
+    min-height: 40px;
+    width: 100%;
+    font-size: medium;
+
+    padding: 2% 2% 2% 2%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid;
+}
+
+/* Button */
+.forgot-password .submit{
+    background-color: orange;
+    color: #fefefe;
+    border: 0px;
+    border-radius: 20px;
+    font-size: medium;
+    font-weight: bold;
+    width: 100%;
+    min-height: 20px;
+    padding: 2%;
+    margin-top: 10%;
+}
+
+.forgot-password .submit:hover{
+    background-color: #fbbf77;
+    color: #000;
+}
