@@ -182,7 +182,8 @@ const deleteStudentTask = async (req, res) => {
             //path
             const paths = __dirname;
             const downloadPath = path.join(paths,'ManuscriptFiles/')
-
+            const downloadPath = path.join(paths,'ManuscriptFiles/').replace('Controller/FileUpload/', '');
+        
             //filename
             const split = file.path.split('/');
             const filename = split[split.length - 1];
