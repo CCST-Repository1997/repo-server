@@ -191,6 +191,9 @@ const deleteFile= async (req, res) => {
         const paths = __dirname;
         const downloadPath = path.join(paths,'ManuscriptFiles\\')
         
+        console.log(paths);
+        console.log(downloadPath);
+        
             //filename
         const split = file.path.split('\\');
         const filename = split[split.length - 1];
