@@ -195,7 +195,7 @@ const deleteFile= async (req, res) => {
         console.log(downloadPath);
         
             //filename
-        const split = file.path.split('\\');
+        const split = file.path.split('/');
         const filename = split[split.length - 1];
         
         console.log(filename);
