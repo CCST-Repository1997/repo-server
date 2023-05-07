@@ -191,7 +191,7 @@ const deleteStudentTask = async (req, res) => {
             fs.unlink(downloadPath + filename, (err) => {
                 // error
                 if (err) {
-                    return console.log("File deletion failed!")
+                    return console.log("File deletion failed!", err)
                 }
                 // success
                 return console.log("Delete File successfully.");
