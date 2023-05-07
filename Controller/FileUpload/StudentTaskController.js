@@ -181,10 +181,10 @@ const deleteStudentTask = async (req, res) => {
         //delete the file
             //path
             const paths = __dirname;
-            const downloadPath = path.join(paths,'ManuscriptFiles\\')
+            const downloadPath = path.join(paths,'ManuscriptFiles/')
 
             //filename
-            const split = file.path.split('\\');
+            const split = file.path.split('/');
             const filename = split[split.length - 1];
     
             // pass to font end
