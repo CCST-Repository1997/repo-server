@@ -169,21 +169,21 @@ const deleteManuscript = async (req, res) => {
     //   const manuscriptPath = __dirname.slice(0, 43);
       const manuscriptDownloadPath = path.join(
         manuscriptPath,
-        "\\ManuscriptFiles\\"
-      );
+        'ManuscriptFiles/'
+      ).replace('Controller/FileUpload/', '');
   
       // filename
-      const manuscriptSplit = file.manuscriptPath.split("\\");
+      const manuscriptSplit = file.manuscriptPath.split("/");
       const manuscriptFilename = manuscriptSplit[manuscriptSplit.length - 1];
   
       // Abstract
       // path
       const abstractPath = __dirname
     //   const abstractPath = __dirname.slice(0, 43);
-      const abstractDownloadPath = path.join(abstractPath, "\\ManuscriptFiles\\");
+      const abstractDownloadPath = path.join(abstractPath, 'ManuscriptFiles/').replace('Controller/FileUpload/', '');
   
       // filename
-      const abstractSplit = file.abstractPath.split("\\");
+      const abstractSplit = file.abstractPath.split("/");
       const abstractFilename = abstractSplit[abstractSplit.length - 1];
   
       console.log("Manuscript download path:", manuscriptDownloadPath, manuscriptFilename)
@@ -253,7 +253,8 @@ const getSingleManuscript = async (req, res) => {
         res.set({
             'Content-Type': files.manuscriptMimetype
         });
-        const downloadPath = path.join(paths,'\\', files.manuscriptPath)
+        const downloadPath = path.join(paths,'\\', files.manuscriptPath).replace('Controller/FileUpload/\\', '');
+        
         res.sendFile(downloadPath)
 
     // catch error
