@@ -189,7 +189,7 @@ const deleteFile= async (req, res) => {
         //delete the file
             //path
         const paths = __dirname;
-        const downloadPath = path.join(paths,'ManuscriptFiles\\').replace('Controller/FileUpload/', '');
+        const downloadPath = path.join(paths,'ManuscriptFiles/').replace('Controller/FileUpload/', '');
         
         console.log(paths);
         console.log(downloadPath);
