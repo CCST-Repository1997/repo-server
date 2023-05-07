@@ -197,6 +197,8 @@ const deleteFile= async (req, res) => {
             //filename
         const split = file.path.split('\\');
         const filename = split[split.length - 1];
+        
+        console.log(filename);
 
         // pass to font end
         fs.unlink(downloadPath + filename, (err) => {
