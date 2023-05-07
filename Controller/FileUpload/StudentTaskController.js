@@ -107,12 +107,11 @@ const getStudentTask = async (req, res) => {
         // Find the file document by id in the database
         const files = await StudentTaskModel.findById({ _id: id });
 
-        // Get the first 43 characters of the __dirname variable
-        const paths = __dirname.slice
-        // const paths = __dirname.slice(0, 43);
+        // Get the path location
+       const paths = __dirname;
 
         // Join the paths variable with the file's path
-        const downloadPath = path.join(paths,'\\',files.path);
+        const downloadPath = path.join(paths,'\\', files.path).replace('Controller/FileUpload/\\', '');
 
         // set the content-type header
         res.set({
@@ -182,8 +181,7 @@ const deleteStudentTask = async (req, res) => {
         //delete the file
             //path
             const paths = __dirname;
-            // const paths = __dirname.slice(0, 43)
-            const downloadPath = path.join(paths,'\\ManuscriptFiles\\')
+            const downloadPath = path.join(paths,'ManuscriptFiles/')
 
             //filename
             const split = file.path.split('\\');
