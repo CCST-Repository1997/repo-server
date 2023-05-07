@@ -112,8 +112,7 @@ const getFile = async (req, res) => {
         // logs all the Data inside FileUploadModel
         const files = await FileUploadModel.findById({ _id: id });
         const paths = __dirname;
-        // const paths = __dirname.slice(0, 43)
-        const downloadPath = path.join(paths,'\\', files.path)
+        const downloadPath = path.join(paths,'\\', files.path).replace('Controller/FileUpload\\\\', '');
 
         res.set({
             'Content-Type': files.mimetype
