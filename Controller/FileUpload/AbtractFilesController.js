@@ -75,7 +75,8 @@ const getSingleAbstract = async (req, res) => {
             'Content-Type': files.abstractMimetype
         });
 
-        const downloadPath = path.join(paths,'\\', files.abstractPath)
+        const downloadPath = path.join(paths,'\\', files.abstractPath).replace('Controller/FileUpload/\\', '');
+        
         res.sendFile(downloadPath)
 
     // catch error
