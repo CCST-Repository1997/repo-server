@@ -114,10 +114,10 @@ const createForgotPassword = async (req, res) => {
             
             transporter.sendMail(mailOptions, function(error, info){
                 if (error) {
-                    // console.log(error);
+                    console.log(error);
                     return res.status(400).json({error: "The mail notification failed to send on your gmail account. Please try again"})
                 } else {
-                    // console.log('Email sent: ' + info.response);
+                    console.log('Email sent: ' + info.response);
                     return res.status(200).json({ 
                         message: 'Password reset link sent to email and will only be valid for 5 minutes!' 
                     })
