@@ -93,8 +93,8 @@ const createForgotPassword = async (req, res) => {
         const handleForgotPassword = (email, _id) => {
             //create a token
             const token = jwt.sign( {  email: email, id: _id }, process.env.SECRET, { expiresIn: '5m' }) 
-            const link = `https://ccst-repo-app-api.onrender.com/user/forgot-password/${_id}/${token}`
-
+            const link = `https://ccst-repo-api.onrender.com/user/forgot-password/${_id}/${token}`
+          
             //nodemailer
             // console.log(link);
             var transporter = nodemailer.createTransport({
