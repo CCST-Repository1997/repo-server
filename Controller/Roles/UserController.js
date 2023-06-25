@@ -106,7 +106,7 @@ const createForgotPassword = async (req, res) => {
             });
             
             var mailOptions = {
-                from: 'youremail@gmail.com',
+                from: `${process.env.SENDGRID_USER}`,
                 to: email,
                 subject: 'CCST Repository System - Password Reset',
                 text: link
